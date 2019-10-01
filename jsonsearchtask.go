@@ -83,7 +83,7 @@ func getAllManager(w http.ResponseWriter, r *http.Request) {
 	json.NewEncoder(w).Encode(managers)
 }
 
-/*func updateEvent(w http.ResponseWriter, r *http.Request) {
+func updateEvent(w http.ResponseWriter, r *http.Request) {
 	// Get the ID from the url
 	eventID := mux.Vars(r)["id"]
 	var updatedEvent manager
@@ -103,9 +103,9 @@ func getAllManager(w http.ResponseWriter, r *http.Request) {
 			json.NewEncoder(w).Encode(singleEvent)
 		}
 	}
-}*/
+}
 
-/*func deleteEvent(w http.ResponseWriter, r *http.Request) {
+func deleteEvent(w http.ResponseWriter, r *http.Request) {
 	// Get the ID from the url
 	eventID := mux.Vars(r)["id"]
 
@@ -117,7 +117,7 @@ func getAllManager(w http.ResponseWriter, r *http.Request) {
 			fmt.Fprintf(w, "The manager with ID %v has been deleted successfully", eventID)
 		}
 	}
-}*/
+}
 func main() {
 	router := mux.NewRouter().StrictSlash(true)
 	router.HandleFunc("/", homeLink)
